@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Dhgms.QualityAssurancePack</id>
+    <version>$version$</version>
+    <title>DHGMS Quality Assurance Pack</title>
+    <authors>dhgms-solutions dpvreony</authors>
+    <owners>dhgms-solutions dpvreony</owners>
+    <licenseUrl>https://raw.githubusercontent.com/DHGMS-Solutions/QualityAssurancePack/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/DHGMS-Solutions/QualityAssurancePack</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Pack of nuget packages to aid quality assurance in the build process</description>
+    <copyright>Copyright belongs to respective package owners</copyright>
+    <tags>Roslyn QA</tags>
+  </metadata>
+  <files>
+    <file src="bin\Debug\*.dll" target="lib" exclude="**\*.*" /> 
+    <file src="*.txt" exclude="**\*.*" />
+  </files>
+</package>
