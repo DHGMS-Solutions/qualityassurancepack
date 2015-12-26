@@ -1,1 +1,0 @@
-..\..\tools\nuget.exe pack Dhgms.QualityAssurancePack\Dhgms.QualityAssurancePack.csproj -Exclude "**\*"
