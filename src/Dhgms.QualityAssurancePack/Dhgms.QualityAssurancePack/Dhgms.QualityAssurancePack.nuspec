@@ -4,8 +4,8 @@
     <id>Dhgms.QualityAssurancePack</id>
     <version>$version$</version>
     <title>DHGMS Quality Assurance Pack</title>
-    <authors>dhgms-solutions dpvreony</authors>
-    <owners>dhgms-solutions dpvreony</owners>
+    <authors>dhgmssolutions dpvreony</authors>
+    <owners>dhgmssolutions dpvreony</owners>
     <licenseUrl>https://raw.githubusercontent.com/DHGMS-Solutions/QualityAssurancePack/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/DHGMS-Solutions/QualityAssurancePack</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -14,7 +14,7 @@
     <tags>Roslyn QA</tags>
   </metadata>
   <files>
-    <file src="**\*.dll" target="lib" exclude="**\*.*" /> 
+    <file src="bin\*\*.dll" target="lib" exclude="**\*.*" /> 
     <file src="*.txt" exclude="**\*.*" />
   </files>
 </package>
