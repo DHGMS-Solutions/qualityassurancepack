@@ -14,7 +14,7 @@
     <tags>Roslyn QA</tags>
   </metadata>
   <files>
-    <file src="bin\Debug\*.dll" target="lib" exclude="**\*.*" /> 
+    <file src="**\*.dll" target="lib" exclude="**\*.*" /> 
     <file src="*.txt" exclude="**\*.*" />
   </files>
 </package>
