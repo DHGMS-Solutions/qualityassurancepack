@@ -12,8 +12,26 @@
     <description>Pack of nuget packages to aid quality assurance in the build process</description>
     <copyright>Copyright belongs to respective package owners</copyright>
     <tags>Roslyn QA</tags>
+    <dependencies>
+      <dependency id="codecracker.CSharp" version="1.0.0-rc5" />
+      <dependency id="Desktop.Analyzers" version="1.1.0" />
+      <dependency id="Dhgms.GripeWithRoslyn.Analyzer" version="1.0.12.0-pre" />
+      <dependency id="JetBrains.Annotations" version="10.0.0" />
+      <dependency id="Microsoft.AnalyzerPowerPack" version="1.1.0" />
+      <dependency id="Microsoft.CodeAnalysis.Analyzers" version="1.1.0" />
+      <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="1.1.0" />
+      <dependency id="Microsoft.NETNative.Analyzer" version="1.0.0" />
+      <dependency id="NuGet.CommandLine" version="3.3.0" />
+      <dependency id="RefactoringEssentials" version="3.1.0" />
+      <dependency id="StyleCop.Analyzers" version="1.0.0-rc2" />
+      <dependency id="System.Runtime.Analyzers" version="1.1.0" />
+      <dependency id="System.Runtime.InteropServices.Analyzers" version="1.1.0" />
+      <dependency id="System.Security.Cryptography.Hashing.Algorithms.Analyzers" version="1.1.0" />
+      <dependency id="Wintellect.Analyzers" version="1.0.5.0" />
+    </dependencies>
   </metadata>
   <files>
-    <file src="bin\*\*.dll" target="lib" exclude="**\*.*" /> 
+    <file src="bin\*\*.dll" target="lib" exclude="**\*.*" />
+    <file src="license" />
   </files>
 </package>
