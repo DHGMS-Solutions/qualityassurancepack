@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package >
+<package>
   <metadata>
     <id>Dhgms.QualityAssurancePack</id>
     <version>$version$</version>
@@ -13,21 +13,23 @@
     <copyright>Copyright belongs to respective package owners</copyright>
     <tags>Roslyn QA</tags>
     <dependencies>
-      <dependency id="codecracker.CSharp" version="1.0.0-rc5" />
+      <dependency id="codecracker.CSharp" version="1.0.3" />
       <dependency id="Desktop.Analyzers" version="1.1.0" />
       <dependency id="Dhgms.GripeWithRoslyn.Analyzer" version="1.0.12.0-pre" />
-      <dependency id="JetBrains.Annotations" version="10.0.0" />
+      <dependency id="JetBrains.Annotations" version="11.1.0" />
       <dependency id="Microsoft.AnalyzerPowerPack" version="1.1.0" />
-      <dependency id="Microsoft.CodeAnalysis.Analyzers" version="1.1.0" />
-      <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="1.1.0" />
-      <dependency id="Microsoft.NETNative.Analyzer" version="1.0.0" />
-      <dependency id="NuGet.CommandLine" version="3.3.0" />
-      <dependency id="RefactoringEssentials" version="3.1.0" />
-      <dependency id="StyleCop.Analyzers" version="1.0.0-rc2" />
-      <dependency id="System.Runtime.Analyzers" version="1.1.0" />
-      <dependency id="System.Runtime.InteropServices.Analyzers" version="1.1.0" />
-      <dependency id="System.Security.Cryptography.Hashing.Algorithms.Analyzers" version="1.1.0" />
-      <dependency id="Wintellect.Analyzers" version="1.0.5.0" />
+      <dependency id="Microsoft.CodeAnalysis.Analyzers" version="2.6.0-beta2" />
+      <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="2.6.0-beta2" />
+      <dependency id="Microsoft.NETCore.Analyzers" version="2.6.0-beta2" />
+      <dependency id="Microsoft.NETFramework.Analyzers" version="2.6.0-beta2" />
+      <dependency id="Microsoft.NETNative.Analyzer" version="2.6.0-beta2" />
+      <dependency id="RefactoringEssentials" version="5.6.0" />
+      <dependency id="StyleCop.Analyzers" version="1.1.0-beta004" />
+      <dependency id="System.Runtime.Analyzers" version="1.2.0-beta2" />
+      <dependency id="System.Runtime.InteropServices.Analyzers" version="1.2.0-beta2" />
+      <dependency id="System.Security.Cryptography.Hashing.Algorithms.Analyzers" version="1.2.0-beta2" />
+      <dependency id="Text.Analyzers" version="2.6.0-beta2" />
+      <dependency id="Wintellect.Analyzers" version="1.0.6" />
     </dependencies>
   </metadata>
   <files>
