@@ -1,0 +1,36 @@
+- name: Desktop.Analyzers
+  longname: Desktop Analyzers
+  uri: http://msdn.com/roslyn
+- name: Dhgms.GripeWithRoslyn
+  longname: Gripe With Roslyn
+  uri: https://github.com/DHGMS-Solutions/gripewithroslyn
+- name: JetBrains.Annotations
+  longname: JetBrains Annotations
+  uri: http://www.jetbrains.com/resharper/
+- name: Microsoft.AnalyzerPowerPack
+  longname: Microsoft Analyzer Power Pack
+  uri: http://msdn.com/roslyn
+- name: Microsoft.CodeAnalysis.Analyzers
+  longname: Microsoft Code Analysis Analyzer
+  uri: http://msdn.com/roslyn
+- name: Microsoft.CodeAnalysis.FxCopAnalyzers
+  longname: Microsoft Code Analysis FxCop Analyzers
+  uri: http://msdn.com/roslyn
+- name: Microsoft.NETNative.Analyzer
+  longname: Microsoft .NET Native Analyzer
+  uri: http://msdn.com/roslyn
+- name: RefactoringEssentials
+  longname: Refactoring Essentials
+  uri: http://vsrefactoringessentials.com/
+- name: System.Runtime.Analyzers
+  longname: System Runtime Analyzers
+  uri: http://msdn.com/roslyn
+- name: System.Runtime.InteropServices.Analyzers
+  longname: System Runtime Interop Services Analyzers
+  uri: http://msdn.com/roslyn
+- name: System.Security.Cryptography.Hashing.Algorithms.Analyzers
+  longname: System Security Cryptography Hashing Algorithms Analyzers
+  uri: http://msdn.com/roslyn
+- name: Wintellect.Analyzers
+  longname: Wintellect Analyzers
+  uri: https://github.com/Wintellect/Wintellect.Analyzers
