@@ -86,7 +86,7 @@ var buildVersion = gitVersion.FullBuildMetaData;
 var assemblyVersion = gitVersion.Major + "." + gitVersion.Minor + ".0.0";
 var fileVersion = majorMinorPatch;
 var versionSuffix = gitVersion.PreReleaseTag;
-var packageVersion = isReleaseBranch && string.IsNullOrWhiteSpace(versionSuffix) ? majorMinorPatch : informationalVersion;
+var packageVersion = nugetVersion;
 Information("nugetVersion: " + nugetVersion);
 Information("informationalVersion: " + informationalVersion);
 Information("assemblyVersion: " + assemblyVersion);
