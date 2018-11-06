@@ -313,6 +313,7 @@ Task("Package")
         .WithProperty("AssemblyVersion", assemblyVersion)
         .WithProperty("FileVersion", fileVersion)
         .WithProperty("InformationalVersion", informationalVersion)
+        .WithProperty("VersionSuffix", versionSuffix)
         .SetVerbosity(Verbosity.Minimal)
         .SetNodeReuse(false));
 });
