@@ -86,6 +86,7 @@ var buildVersion = gitVersion.FullBuildMetaData;
 var assemblyVersion = gitVersion.Major + "." + gitVersion.Minor + ".0.0";
 var fileVersion = majorMinorPatch;
 var packageVersion = isReleaseBranch ? majorMinorPatch : informationalVersion;
+var versionSuffix = gitVersion.PreReleaseTagWithDash;
 Information("nugetVersion: " + nugetVersion);
 Information("informationalVersion: " + informationalVersion);
 Information("assemblyVersion: " + assemblyVersion);
@@ -160,6 +161,7 @@ Task("BuildSolution")
             .WithProperty("AssemblyVersion", assemblyVersion)
             .WithProperty("FileVersion", fileVersion)
             .WithProperty("InformationalVersion", informationalVersion)
+            .WithProperty("VersionSuffix", versionSuffix)
             .WithProperty("PublishRepositoryUrl", "true")
             .WithProperty("EmbedUntrackedSources", "true")
             .WithProperty("AllowedOutputExtensionsInPackageBuildOutputFolder", "$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb")
