@@ -25,7 +25,7 @@
 	  <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="2.6.2" />
 	  <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.0-beta2" />
 	  <PackageReference Include="Microsoft.NETCore.Analyzers" Version="2.6.2" />
-	  <PackageReference Include="Microsoft.NETFramework.Analyzers" Version="2.6.0-beta2" />
+	  <PackageReference Include="Microsoft.NETFramework.Analyzers" Version="2.6.2" />
 	  <PackageReference Include="Microsoft.NETNative.Analyzer" Version="1.0.0" />
 	  <PackageReference Include="RefactoringEssentials" Version="5.6.0" />
 	  <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta004" />
