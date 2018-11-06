@@ -17,7 +17,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-	  <PackageReference Include="codecracker.CSharp" Version="1.0.3" />
+	  <PackageReference Include="codecracker.CSharp" Version="1.1.0" />
 	  <PackageReference Include="Desktop.Analyzers" Version="1.1.0" />
 	  <PackageReference Include="Dhgms.GripeWithRoslyn.Analyzer" Version="1.0.12.0-pre" />
 	  <PackageReference Include="JetBrains.Annotations" Version="11.1.0" />
