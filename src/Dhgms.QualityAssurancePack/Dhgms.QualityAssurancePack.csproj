@@ -13,6 +13,7 @@
     <PackageTags>Roslyn Analyzer</PackageTags>
     <DebugType>full</DebugType>
     <DebugSymbols>True</DebugSymbols>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
   </PropertyGroup>
 
   <ItemGroup>
