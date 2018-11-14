@@ -6,7 +6,7 @@
     <Company>DHGMS Solutions</Company>
     <Product>DHGMS Quality Assurance Pack</Product>
     <Version>1.1.0</Version>
-    <Description>NLog Target for using a Text Writer</Description>
+    <Description>Collection of packages for assisting in QA during .NET software development</Description>
     <PackageProjectUrl>https://github.com/DHGMS-Solutions/qualityassurancepack</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DHGMS-Solutions/qualityassurancepack</RepositoryUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/DHGMS-Solutions/qualityassurancepack/master/LICENSE</PackageLicenseUrl>
