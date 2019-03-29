@@ -26,7 +26,7 @@
 	  <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.0" />
 	  <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" />
 	  <PackageReference Include="Microsoft.NETCore.Analyzers" Version="2.9.1" />
-	  <PackageReference Include="Microsoft.NETFramework.Analyzers" Version="2.9.0" />
+	  <PackageReference Include="Microsoft.NETFramework.Analyzers" Version="2.9.1" />
 	  <PackageReference Include="Microsoft.NETNative.Analyzer" Version="1.0.0" />
 	  <PackageReference Include="RefactoringEssentials" Version="5.6.0" />
     <PackageReference Include="SecurityCodeScan" Version="3.0.0" />
