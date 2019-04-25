@@ -19,7 +19,7 @@
   <ItemGroup>
 	  <PackageReference Include="codecracker.CSharp" Version="1.1.0" />
 	  <PackageReference Include="Desktop.Analyzers" Version="1.1.0" />
-	  <PackageReference Include="Dhgms.GripeWithRoslyn.Analyzer" Version="1.4.0" />
+	  <PackageReference Include="Dhgms.GripeWithRoslyn.Analyzer" Version="1.5.0" />
 	  <PackageReference Include="JetBrains.Annotations" Version="2019.1.1" />
 	  <PackageReference Include="Microsoft.AnalyzerPowerPack" Version="1.1.0" />
 	  <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="2.9.2" />
