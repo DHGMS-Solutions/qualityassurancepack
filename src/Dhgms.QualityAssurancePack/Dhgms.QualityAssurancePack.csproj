@@ -30,7 +30,7 @@
 	  <PackageReference Include="Microsoft.NETFramework.Analyzers" Version="2.9.4" />
 	  <PackageReference Include="Microsoft.NETNative.Analyzer" Version="1.0.0" />
 	  <PackageReference Include="RefactoringEssentials" Version="5.6.0" />
-    <PackageReference Include="SecurityCodeScan" Version="3.2.0" />
+    <PackageReference Include="SecurityCodeScan" Version="3.3.0" />
 	  <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
   </ItemGroup>
 </Project>
