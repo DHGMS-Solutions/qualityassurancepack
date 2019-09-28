@@ -18,19 +18,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-	  <PackageReference Include="codecracker.CSharp" Version="1.1.0" />
-	  <PackageReference Include="Desktop.Analyzers" Version="1.1.0" />
-	  <PackageReference Include="Dhgms.GripeWithRoslyn.Analyzer" Version="1.8.0" />
-	  <PackageReference Include="JetBrains.Annotations" Version="2019.1.3" />
-	  <PackageReference Include="Microsoft.AnalyzerPowerPack" Version="1.1.0" />
-	  <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="2.9.4" />
-	  <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.4" />
-	  <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" />
-	  <PackageReference Include="Microsoft.NETCore.Analyzers" Version="2.9.4" />
-	  <PackageReference Include="Microsoft.NETFramework.Analyzers" Version="2.9.4" />
-	  <PackageReference Include="Microsoft.NETNative.Analyzer" Version="1.0.0" />
-	  <PackageReference Include="RefactoringEssentials" Version="5.6.0" />
+    <PackageReference Include="codecracker.CSharp" Version="1.1.0" />
+    <PackageReference Include="Desktop.Analyzers" Version="1.1.0" />
+    <PackageReference Include="Dhgms.GripeWithRoslyn.Analyzer" Version="1.8.0" />
+    <PackageReference Include="JetBrains.Annotations" Version="2019.1.3" />
+    <PackageReference Include="Microsoft.AnalyzerPowerPack" Version="1.1.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="2.9.4" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.4" />
+    <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" />
+    <PackageReference Include="Microsoft.NETCore.Analyzers" Version="2.9.4" />
+    <PackageReference Include="Microsoft.NETFramework.Analyzers" Version="2.9.4" />
+    <PackageReference Include="Microsoft.NETNative.Analyzer" Version="1.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="16.3.52" />
+    <PackageReference Include="RefactoringEssentials" Version="5.6.0" />
     <PackageReference Include="SecurityCodeScan" Version="3.3.0" />
-	  <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
   </ItemGroup>
 </Project>
