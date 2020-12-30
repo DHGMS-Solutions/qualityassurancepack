@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net46;netstandard1.3;netstandard1.5;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <Authors>dhgmssolutions dpvreony</Authors>
     <Company>DHGMS Solutions</Company>
     <Product>DHGMS Quality Assurance Pack</Product>
@@ -21,14 +21,14 @@
     <PackageReference Include="codecracker.CSharp" Version="1.1.0" />
     <PackageReference Include="Desktop.Analyzers" Version="1.1.0" />
     <PackageReference Include="Dhgms.GripeWithRoslyn.Analyzer" Version="1.8.0" />
+    <PackageReference Include="InclusivenessAnalyzer" Version="1.2.0" />
     <PackageReference Include="JetBrains.Annotations" Version="2020.3.0" />
     <PackageReference Include="Microsoft.AnalyzerPowerPack" Version="1.1.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.2" />
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.2" />
-    <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" />
-    <PackageReference Include="Microsoft.NETCore.Analyzers" Version="3.3.2" />
-    <PackageReference Include="Microsoft.NETFramework.Analyzers" Version="3.3.2" />
-    <PackageReference Include="Microsoft.NETNative.Analyzer" Version="1.0.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="5.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="16.8.55" />
     <PackageReference Include="RefactoringEssentials" Version="5.6.0" />
     <PackageReference Include="SecurityCodeScan" Version="3.5.3" />
