@@ -19,17 +19,14 @@
 
   <ItemGroup>
     <PackageReference Include="ClrHeapAllocationAnalyzer" Version="3.0.0" />
-    <PackageReference Include="codecracker.CSharp" Version="1.1.0" />
     <PackageReference Include="Desktop.Analyzers" Version="1.1.0" />
     <PackageReference Include="Dhgms.GripeWithRoslyn.Analyzer" Version="1.8.0" />
     <PackageReference Include="InclusivenessAnalyzer" Version="1.2.0" />
     <PackageReference Include="JetBrains.Annotations" Version="2021.3.0" />
-    <PackageReference Include="Microsoft.AnalyzerPowerPack" Version="1.1.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3" />
     <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="6.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.0.64" />
-    <PackageReference Include="RefactoringEssentials" Version="5.6.0" />
-    <PackageReference Include="SecurityCodeScan" Version="3.5.4" />
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
+    <PackageReference Include="SecurityCodeScan.VS2019" Version="5.2.1" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.354" />
   </ItemGroup>
 </Project>
