@@ -109,7 +109,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: nuget
-        path: artifacts/nuget/vetuviem.*.nupkg
+        path: artifacts/nuget/Dhgms.*.nupkg
 
     - name: store omd
       uses: actions/upload-artifact@v2
