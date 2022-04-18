@@ -52,7 +52,6 @@ jobs:
         dotnet tool install --global dotnet-outdated-tool
         dotnet tool install --global snitch
         dotnet tool install --global dotnet-sonarscanner
-        dotnet tool install --global JetBrains.ReSharper.GlobalTools --version 2021.2.2
 
     - name: Prepare Artifact Directory
       run: |
@@ -75,21 +74,12 @@ jobs:
     # msbuild used because we run targets not supported by dotnet build
     - name: Run Build
       run: |
-        msbuild /t:build /nowarn:MSB4011 /maxcpucount /p:NoPackageAnalysis=true /verbosity:minimal /p:Configuration=Release
+        msbuild /t:build,pack /p:Configuration=Release /maxcpucount /bl:artifacts\\binlog\\build.binlog /p:ContinuousIntegrationBuild=true /p:PackageOutputPath=..\..\artifacts\nuget
       working-directory: src
       
-    - name: Produce Nuget Packages
-      run: msbuild /t:pack /nowarn:MSB4011 /maxcpucount /p:NoPackageAnalysis=true /verbosity:minimal /p:Configuration=Release /p:PackageOutputPath=..\..\artifacts\nuget /p:ContinuousIntegrationBuild=true
-      working-directory: src
-
     - name: List outdated packages
       run: |
         dotnet outdated -o artifacts\outdated\outdated.json src
-
-
-    - name: Run Resharper Duplicate Code Finder
-      run: |
-        jb dupfinder ${{ env.solutionpath }} -o=artifacts\dupfinder\report.xml
 
 # only store binlog on failure
     - name: store binlogs
