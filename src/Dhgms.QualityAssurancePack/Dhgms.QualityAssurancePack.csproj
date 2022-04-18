@@ -5,7 +5,6 @@
     <Authors>dhgmssolutions dpvreony</Authors>
     <Company>DHGMS Solutions</Company>
     <Product>DHGMS Quality Assurance Pack</Product>
-    <Version>1.1.0</Version>
     <Description>Collection of packages for assisting in QA during .NET software development</Description>
     <PackageProjectUrl>https://github.com/DHGMS-Solutions/qualityassurancepack</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DHGMS-Solutions/qualityassurancepack</RepositoryUrl>
