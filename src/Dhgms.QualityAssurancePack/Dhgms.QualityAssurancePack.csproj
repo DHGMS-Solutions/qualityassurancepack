@@ -17,7 +17,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ClrHeapAllocationAnalyzer" Version="3.0.0" />
+    <!--<PackageReference Include="ClrHeapAllocationAnalyzer" Version="3.0.0" />-->
     <PackageReference Include="Desktop.Analyzers" Version="1.1.0" />
     <PackageReference Include="Dhgms.GripeWithRoslyn.Analyzer" Version="1.8.0" />
     <PackageReference Include="InclusivenessAnalyzer" Version="1.2.0" />
