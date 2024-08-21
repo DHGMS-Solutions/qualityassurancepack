@@ -1,0 +1,13 @@
+﻿<Project>
+  <Target Name="CheckAnalyzerNotBeingUsedAsAssemblyReference" BeforeTargets="Build">
+    <Message Importance="medium" Text="Checking for Analyzer ProjectReferences with ReferenceOutputAssembly enabled..." />
+
+    <ItemGroup>
+      <FilteredProjectReferences Include="@(ProjectReference)" 
+                                 Condition="'%(ProjectReference.OutputItemType)' == 'Analyzer' and '%(ProjectReference.ReferenceOutputAssembly)' != 'False'">
+        <Error Code="QA0001"
+               Text="Analyzer Project Reference MUST have ReferenceOutputAssembly set to False : %(ProjectPath)" />
+      </FilteredProjectReferences>
+    </ItemGroup>
+  </Target>
+</Project>

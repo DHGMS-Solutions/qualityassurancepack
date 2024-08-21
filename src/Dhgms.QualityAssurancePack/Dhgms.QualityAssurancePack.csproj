@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
@@ -30,5 +30,9 @@
     <PackageReference Include="SonarAnalyzer.CSharp" Version="9.32.0.97167" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.556" />
     <PackageReference Include="Nerdbank.GitVersioning" Version="3.6.141" PrivateAssets="all" />	
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Dhgms.QualityAssurancePack.targets" Pack="true" PackagePath="build" />
   </ItemGroup>
 </Project>
