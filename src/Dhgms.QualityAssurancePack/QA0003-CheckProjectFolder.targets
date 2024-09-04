@@ -1,0 +1,19 @@
+﻿<Project>
+  <Target Name="CheckProjectFolder" BeforeTargets="Build">
+    <PropertyGroup>
+      <ProjectDirectory>$(MSBuildProjectDirectory)</ProjectDirectory>
+      <ProjectFileNameNoExt>$(MSBuildProjectName)</ProjectFileNameNoExt>
+    </PropertyGroup>
+
+    <!-- Extract the last part of the project directory path -->
+    <ItemGroup>
+      <DirectoryParts Include="$(ProjectDirectory)" />
+      <LastDirectoryPart Condition=" '@(DirectoryParts->Reverse()->ItemSpec())' " Include="%(DirectoryParts.Identity)" />
+    </ItemGroup>
+
+    <!-- Compare the project folder name with the project file name -->
+    <Error Code="QA0003"
+           Text="Project folder '$(LastDirectoryPart)' does not match project file name '$(MSBuildProjectName)'." 
+           Condition="'$(LastDirectoryPart)' != '$(ProjectFileNameNoExt)'" />
+  </Target>
+</Project>

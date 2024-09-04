@@ -1,0 +1,23 @@
+﻿<Project>
+  <Target Name="CheckProjectReferencesForExe" BeforeTargets="Build">
+    <ItemGroup>
+      <!-- Collect all project references -->
+      <ExeReferences Include="@(ProjectReference)" />
+    </ItemGroup>
+
+    <MSBuild Projects="%(ExeReferences.FullPath)" Targets="GetTargetPath" Properties="OutputType=%(OutputType)">
+      <Output TaskParameter="TargetOutputs" ItemName="ReferenceOutputs" />
+    </MSBuild>
+
+    <ItemGroup>
+      <!-- Check if the OutputType for referenced projects is Exe -->
+      <ExeProjects Include="%(ExeReferences.FullPath)" 
+                   Condition="'%(OutputType)' == 'Exe'" />
+    </ItemGroup>
+
+    <!-- Emit error if any referenced project outputs an Exe -->
+    <Error Code="QA0004"
+           Text="Error: Project '$(MSBuildProjectName)' references project '%(ExeProjects.Identity)' which outputs an EXE."
+           Condition="'@(ExeProjects)' != ''" />
+  </Target>
+</Project>
