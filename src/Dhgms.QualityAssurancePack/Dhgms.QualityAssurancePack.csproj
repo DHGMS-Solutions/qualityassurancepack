@@ -33,6 +33,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Dhgms.QualityAssurancePack.targets" Pack="true" PackagePath="build" />
+    <None Include="*.targets" Pack="true" PackagePath="build" />
   </ItemGroup>
 </Project>
