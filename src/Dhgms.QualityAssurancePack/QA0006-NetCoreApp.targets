@@ -1,0 +1,10 @@
+﻿<Project>
+  <Target Name="WarnOnTargetFramework" BeforeTargets="BeforeBuild">
+    <ItemGroup>
+      <ActualVersion>$([System.Version]::Parse($(TargetFramework.Substring(10))).Major)</ActualVersion>
+    </ItemGroup>
+
+    <Warning Text="NetCoreApp profiles were made obsolete as of net5. Change the profile to net"
+             Condition="$(TargetFramework.StartsWith('netcoreapp') And '($(ActualVersion)' >= 5)" />
+  </Target>
+</Project>
