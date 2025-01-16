@@ -17,12 +17,9 @@
                           Condition="'%(Reference.AssemblyName)' == '@(AllPackageReferences->WithMetadataValue('Identity', '%(Reference.AssemblyName)'))'" />
     </ItemGroup>
 
-    <!-- Log Matching References -->
-    <Message Text="Found Matching Reference: %(MatchingReferences.Identity)" Importance="High"
-             Condition="'@(MatchingReferences)' != ''" />
-
     <!-- Emit a warning if matches are found -->
-    <Warning Text="PackageReference matches a reference assembly: %(MatchingReferences.Identity). Consider replacing the package with a FrameworkReference."
+    <Warning Code="QA0007"
+             Text="PackageReference matches a reference assembly: %(MatchingReferences.Identity). Consider replacing the package with a FrameworkReference."
              Condition="'@(MatchingReferences)' != ''" />
   </Target>
 
