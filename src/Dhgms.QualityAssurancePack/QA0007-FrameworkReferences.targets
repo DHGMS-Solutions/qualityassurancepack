@@ -1,0 +1,26 @@
+﻿<Project>
+  <Target Name="ListFrameworkReferences" DependsOnTargets="ResolveTargetingPackAssets">
+
+    <!-- Log resolved framework references -->
+    <Message Text="Resolved Framework Reference: %(Reference.AssemblyName)" Importance="High" />
+  </Target>
+
+  <Target Name="CheckPackagesForMatchingFrameworkReferences" BeforeTargets="Compile">
+    <!-- Collect all PackageReferences -->
+    <ItemGroup>
+      <AllPackageReferences Include="@(PackageReference)" />
+    </ItemGroup>
+
+    <!-- Loop through References and check if any match PackageReference -->
+    <ItemGroup>
+      <MatchingReferences Include="@(Reference)"
+                          Condition="'%(Reference.AssemblyName)' == '@(AllPackageReferences->WithMetadataValue('Identity', '%(Reference.AssemblyName)'))'" />
+    </ItemGroup>
+
+    <!-- Emit a warning if matches are found -->
+    <Warning Code="QA0007"
+             Text="PackageReference matches a reference assembly: %(MatchingReferences.Identity). Consider replacing the package with a FrameworkReference."
+             Condition="'@(MatchingReferences)' != ''" />
+  </Target>
+
+</Project>
