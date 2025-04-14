@@ -6,4 +6,5 @@
   <Import Project="QA0005-CheckDotNetToolProjectNameSuffix.targets" />
   <Import Project="QA0006-NetCoreApp.targets" />
   <Import Project="QA0007-FrameworkReferences.targets" />
+  <Import Project="QA0008-PortablePdb.targets" />
 </Project>
