@@ -1,18 +1,28 @@
 ﻿<Project>
+  <!--
+  Even though there are 2 targets in this file, they are technically used in different projects.
+
+  GetoutputType is used in the project reference to get the OutputType of the project.
+  CheckProjectReferencesForExe is used in the downstream project and calls into the upstream project to run GetOutputType.
+  -->
+  <Target Name="GetOutputType" Returns="@(OutputTypeItem)">
+    <ItemGroup>
+      <OutputTypeItem Include="$(OutputType)" />
+    </ItemGroup>
+  </Target>
+
   <Target Name="CheckProjectReferencesForExe" BeforeTargets="Build">
     <ItemGroup>
-      <!-- Collect all project references -->
       <ExeReferences Include="@(ProjectReference)" />
     </ItemGroup>
 
-    <MSBuild Projects="%(ExeReferences.FullPath)" Targets="GetTargetPath" Properties="OutputType=%(OutputType)">
-      <Output TaskParameter="TargetOutputs" ItemName="ReferenceOutputs" />
+    <MSBuild Projects="@(ExeReferences)" Targets="GetOutputType">
+      <Output TaskParameter="TargetOutputs" ItemName="ReferenceOutputTypes" />
     </MSBuild>
 
     <ItemGroup>
-      <!-- Check if the OutputType for referenced projects is Exe -->
-      <ExeProjects Include="%(ExeReferences.FullPath)" 
-                   Condition="'%(OutputType)' == 'Exe'" />
+      <ExeProjects Include="@(ReferenceOutputTypes)"
+                   Condition="'%(Identity)' == 'Exe'" />
     </ItemGroup>
 
     <!-- Emit error if any referenced project outputs an Exe -->
