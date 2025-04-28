@@ -16,7 +16,7 @@
     <Error
       Code="QA0009"
       Condition="'@(ReadmeCandidates)' == ''"
-      Text="Packing failed: No 'readme.md' is included in the package." />
+      Text="Pre-Packing requirement failed: No 'readme.md' is included in the package." />
 
     <!-- Find the ones that are at the root -->
     <ItemGroup>
@@ -28,11 +28,11 @@
     <Error
       Code="QA0009"
       Condition="'@(RootReadmes)' == ''"
-      Text="Packing failed: No 'readme.md' found at package root (PackagePath='')." />
+      Text="Pre-Packing requirement failed: No 'readme.md' found at package root (PackagePath='')." />
 
     <Error
       Code="QA0009"
       Condition="'@(RootReadmes->Count())' != '1'"
-      Text="Packing failed: Multiple 'readme.md' files found at package root. Only one is allowed." />
+      Text="Pre-Packing requirement failed: Multiple 'readme.md' files found at package root. Only one is allowed." />
   </Target>
 </Project>
