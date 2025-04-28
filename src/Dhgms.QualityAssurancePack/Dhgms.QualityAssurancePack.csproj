@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
@@ -8,12 +8,13 @@
     <Description>Collection of packages for assisting in QA during .NET software development</Description>
     <PackageProjectUrl>https://github.com/DHGMS-Solutions/qualityassurancepack</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DHGMS-Solutions/qualityassurancepack</RepositoryUrl>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/DHGMS-Solutions/qualityassurancepack/master/LICENSE</PackageLicenseUrl>
+    <PackageLicense>MIT</PackageLicense>
     <PackageTags>Roslyn Analyzer</PackageTags>
     <DebugType>full</DebugType>
     <DebugSymbols>True</DebugSymbols>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <DevelopmentDependency>true</DevelopmentDependency>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,5 +34,6 @@
 
   <ItemGroup>
     <None Include="*.targets" Pack="true" PackagePath="build" />
+    <None Include="readme.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>
