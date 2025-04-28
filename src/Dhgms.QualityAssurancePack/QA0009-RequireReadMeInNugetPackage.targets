@@ -1,5 +1,5 @@
 ﻿<Project>
-  <Target Name="EnsureSingleRootReadmePackedCorrectly" BeforeTargets="Pack">
+  <Target Name="EnsureSingleRootReadmePackedCorrectly" BeforeTargets="Pack" Condition="$(IsPackable) != 'false'">
     <ItemGroup>
       <!-- Gather all files that will be packed -->
       <PackableFiles Include="@(Content)" Condition="'%(Content.Pack)' == 'true'" />
