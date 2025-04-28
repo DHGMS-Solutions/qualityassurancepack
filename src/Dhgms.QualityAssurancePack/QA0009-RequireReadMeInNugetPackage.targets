@@ -18,10 +18,10 @@
       Condition="'@(ReadmeCandidates)' == ''"
       Text="Packing failed: No 'readme.md' is included in the package." />
 
-    <!-- Find the ones that are at the root (PackagePath is empty) -->
+    <!-- Find the ones that are at the root -->
     <ItemGroup>
       <RootReadmes Include="@(ReadmeCandidates)"
-                   Condition="'%(PackagePath)' == ''" />
+                   Condition="'%(PackagePath)' == '' or %(PackagePath)' == '/' or %(PackagePath)' == '\'" />
     </ItemGroup>
 
     <!-- Error if there is not exactly one root readme.md -->
