@@ -5,22 +5,31 @@
     <Message Text="Resolved Framework Reference: %(Reference.AssemblyName)" Importance="High" />
   </Target>
 
-  <Target Name="CheckPackagesForMatchingFrameworkReferences" BeforeTargets="Compile">
-    <!-- Collect all PackageReferences -->
+  <Target Name="CheckPackagesForMatchingFrameworkReferences"
+          BeforeTargets="Compile">
+  
+    <ResolveTargetingPackAssets FrameworkReferences="@(FrameworkReference)"
+                                ProjectLanguage="$(Language)"
+                                ResolvedTargetingPacks="@(ResolvedTargetingPack)"
+                                RuntimeFrameworks="@(RuntimeFramework)"
+                                GenerateErrorForMissingTargetingPacks="$(GenerateErrorForMissingTargetingPacks)"
+                                NuGetRestoreSupported="$(_NuGetRestoreSupported)"
+                                DisableTransitiveFrameworkReferenceDownloads="$(DisableTransitiveFrameworkReferenceDownloads)"
+                                NetCoreTargetingPackRoot="$(NetCoreTargetingPackRoot)">
+      <Output TaskParameter="ReferencesToAdd" ItemName="TargetingPackReferencesForQA" />
+    </ResolveTargetingPackAssets>
+
     <ItemGroup>
       <AllPackageReferences Include="@(PackageReference)" />
     </ItemGroup>
 
-    <!-- Loop through References and check if any match PackageReference -->
     <ItemGroup>
-      <MatchingReferences Include="@(Reference)"
-                          Condition="'%(Reference.AssemblyName)' == '@(AllPackageReferences->WithMetadataValue('Identity', '%(Reference.AssemblyName)'))'" />
+      <MatchingReferences Include="@(TargetingPackReferencesForQA)"
+                          Condition="'%(TargetingPackReferencesForQA.AssemblyName)' == '@(AllPackageReferences->WithMetadataValue('Identity', '%(Reference.AssemblyName)'))'" />
     </ItemGroup>
 
-    <!-- Emit a warning if matches are found -->
     <Warning Code="QA0007"
              Text="PackageReference matches a reference assembly: %(MatchingReferences.Identity). Consider replacing the package with a FrameworkReference."
              Condition="'@(MatchingReferences)' != ''" />
   </Target>
-
 </Project>
