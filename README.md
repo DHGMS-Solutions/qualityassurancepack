@@ -1,8 +1,6 @@
-# DHGMS Quality Assurance Pack
+# Quality Assurance Pack
 
-[![NuGet Stats](https://img.shields.io/nuget/dt/dhgms.qualityassurancepack.svg)](https://www.nuget.org/packages/dhgms.qualityassurancepack) [![Issue Stats](http://www.issuestats.com/github/dhgms-solutions/qualityassurancepack/badge/issue?style=flat)](http://www.issuestats.com/github/dhgms-solutions/qualityassurancepack) [![Pull Request Stats](http://www.issuestats.com/github/dhgms-solutions/qualityassurancepack/badge/pr?style=flat)](http://www.issuestats.com/github/dhgms-solutions/qualityassurancepack) 
-
-DHGMS Quality Assurance Pack is a starter nuget package to stick in projects that bundles together various Roslyn Analyzers and other tools that can be handy in Quality Assurance of a development project. The projects bundled into this are subjective and may not suit your tastes, but it's a good proof of concept on how you can do something similar for your own team.
+Quality Assurance Pack is a starter nuget package to stick in projects that bundles together various Roslyn Analyzers and other tools that can be handy in Quality Assurance of a development project. The projects bundled into this are subjective and may not suit your tastes, but it's a good proof of concept on how you can do something similar for your own team.
 
 ## Mission Statement
 * Provide a simple package as a proof of concept around a starter for making Quality Assurance a central part of day to day development.
